@@ -42,7 +42,7 @@ app.use("/api", ShiftManagementRoutes);
 app.use("/api", PayrollLeaveManagementRoutes);
 app.use("/api", RegisterRoutes);
 
-app.get("/dashboard", (req, res) => {
+app.get("/dashboard", authenticateToken, (req, res) => {
   res.json({ message: "Welcome to the dashboard!" });
 });
 
