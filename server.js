@@ -47,7 +47,10 @@ app.get("/dashboard", authenticateToken, (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.json({ message: "server is working fine" });
+  res.json({
+    message:
+      "server is working fine https://hospital-management-peach-sigma.vercel.app/#/login",
+  });
 });
 
 const PORT = process.env.PORT || 1000;
